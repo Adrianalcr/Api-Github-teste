@@ -1,0 +1,136 @@
+h1 {
+  color: white;
+}
+
+h2 {
+  color: rebeccapurple;
+}
+
+.App {
+  text-align: center;
+  padding: 15px;
+}
+
+a {
+  list-style-type: none;
+}
+
+.header {
+  background: rebeccapurple;
+  text-align: center;
+  color: white;
+}
+.header a {
+  text-align: center;
+}
+
+.card {
+  color: #282c34;
+}
+.card h1 {
+  margin: 10px;
+  font-size: 25px;
+  color: rebeccapurple;
+}
+.card .list-group-item:hover {
+  cursor: pointer;
+  background: #f7cfff;
+  transition: 0.4s ease;
+}
+.card span {
+  margin: 5px;
+  border-radius: 35px;
+  border: 1px solid #979797;
+}
+
+.card-perfil {
+  color: #282c34;
+  width: 18rem;
+  margin: 10px;
+}
+
+.card-img-top {
+  background: #fff;
+  border-radius: 50%;
+  border: #fc12a2 5px solid;
+}
+
+.card-right {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  font-size: 20px;
+  color: rebeccapurple;
+  background-color: white;
+  border-radius: 15px;
+  justify-content: space-between;
+  padding: auto;
+}
+.card-right a {
+  color: #fff;
+}
+
+.card-header {
+  width: 100%;
+  padding: 0px auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.card-header .badge {
+  margin: 10px;
+  padding: 15px 50px;
+  cursor: pointer;
+  border: 2px solid #fc12a2;
+  border-radius: 35px;
+}
+.card-header .badge:hover {
+  background-color: #8521a6;
+}
+
+.button {
+  width: 100%;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 2px;
+  background-image: linear-gradient(#fc12a2, #8521a6);
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.5s ease;
+  align-items: center;
+}
+.button a {
+  list-style-type: none;
+}
+.button:hover {
+  background: #450c58;
+}
+
+.input {
+  background-color: #fbc8c8;
+  margin: 8px 0;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 0px;
+  justify-content: space-between;
+  color: #333;
+  align-items: center;
+  font-size: 16px;
+}
+.input:hover {
+  background-color: darksalmon;
+  border: 1px solid #450c58;
+}
+
+.row {
+  display: inline;
+  text-align: center;
+  padding: 15px;
+}
+
+.navbar-brand {
+  align-items: center;
+}
