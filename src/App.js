@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './dist/App.css';
-import Header from './components/Header/header';
+import Header from './header';
 import axios from 'axios';
 import Perfil from './Perfil';
-import Repo from './components/Repos/Repo';
-
+import Repo from './Repo';
 
 
 class App extends Component {
