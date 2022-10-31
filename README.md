@@ -1,6 +1,6 @@
 # API Github test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed in the ReactJS.  The goal was to create an application that searches for profiles on github.
 
 ## Available Scripts
 
