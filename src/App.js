@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './dist/App.css';
-import Header from './header';
+import Header from './components/Header/header';
 import axios from 'axios';
 import Perfil from './Perfil';
-import Repo from './Repo';
+import Repo from './components/Repos/Repo';
 
 
 
@@ -13,8 +13,8 @@ class App extends Component {
       this.state = {
         github: {
           url: "https://api.github.com/users",
-          client_id: "CLIENT_ID",
-          client_secret: "CLIENT_SECRET",
+          client_id: process.env.GITHUB_CLIENT_ID,
+          client_secret: process.env.GITHUB_CLIENT_SECRET,
           count: 10,
           sort: "created: asc"
         },
@@ -69,7 +69,6 @@ class App extends Component {
           </div>
           {this.state.user.length !== 0 ? this.renderPerfil() : null}
         </div>
-
       </div>
     );
   } 

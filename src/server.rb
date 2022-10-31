@@ -49,9 +49,9 @@ get '/' do
 
     auth_result = JSON.parse(auth_result)
 
-    if scopes.include? 'user:email'
+    if scopes.include? 'user:name'
       auth_result['private_emails'] =
-        JSON.parse(RestClient.get('https://api.github.com/user/emails',
+        JSON.parse(RestClient.get('https://api.github.com/user/name',
                        {:params => {:access_token => access_token},
                         :accept => :json}))
     end
@@ -64,8 +64,8 @@ get '/callback' do
   session_code = request.env['rack.request.query_hash']['code']
 
   result = RestClient.post('https://github.com/login/oauth/access_token',
-                          {:client_id => CLIENT_ID,
-                           :client_secret => CLIENT_SECRET,
+                          {:client_id => GITHUB_CLIENT_ID,
+                           :client_secret => GITHUB_CLIENT_SECRET,
                            :code => session_code},
                            :accept => :json)
 
