@@ -12,9 +12,7 @@ class App extends Component {
       super();
       this.state = {
         github: {
-          url: "https://api.github.com/users",
-          client_id: (process.env.GITHUB_CLIENT_ID),
-          client_secret: (process.env.GITHUB_CLIENT_SECRET),
+          url: "https://api.github.com/users/",
           count: 10,
           sort: "created: asc"
         },
@@ -28,12 +26,12 @@ class App extends Component {
   getUser = (e) => {
       const user = e.target.value;
 
-      const { url, client_id, client_secret, count, sort } = this.state.github;
+      const { url, count, sort } = this.state.github;
         axios
-          .get(`${url}/${user}?client_id=${client_id}&client_secret=${client_secret}`)
+          .get(`${url}/${user}`)
           .then(({ data }) => this.setState({ user: data }));
         axios
-          .get(`${url}/${user}/repo?per_page=${count}&sort=${sort}&client_id=${client_id}&client_secret=${client_secret}`)
+          .get(`${url}/${user}/repo?per_page=${count}&sort=${sort}`)
           .then(({ data }) => this.state({ repos: data }));
   };
 
